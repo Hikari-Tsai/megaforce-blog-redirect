@@ -8,7 +8,7 @@
 	<script>
 		// blog.megaforce.audio (old WordPress, plain permalinks) -> megaforce.audio/blog/
 		(function () {
-			var base = 'https://megaforce.audio/blog/';
+			var base = location.protocol + '//megaforce.audio/blog/'; // keep http/https of the visitor
 			var posts = [55,109,115,120,124,134,157,169,185,194,218,245,258,285,317,328,332,372,388,439,471,486,530,539,549,552,626,644];
 			var q = new URLSearchParams(location.search);
 			var p = parseInt(q.get('p'), 10);
@@ -19,7 +19,7 @@
 			location.replace(target);
 		})();
 	</script>
-	<noscript><meta http-equiv="refresh" content="0; url=https://megaforce.audio/blog/" /></noscript>
+	<noscript><meta http-equiv="refresh" content="0; url=//megaforce.audio/blog/" /></noscript>
 </head>
 <body>
 	<p>強力大磁鐵 Blog 已搬到 <a href="https://megaforce.audio/blog/">megaforce.audio/blog</a>，正在為您轉址…</p>
